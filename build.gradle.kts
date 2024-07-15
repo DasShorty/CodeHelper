@@ -4,16 +4,16 @@ plugins {
     id("net.labymod.gradle.addon")
 }
 
-group = "org.example"
+group = "de.dasshorty"
 version = System.getenv().getOrDefault("VERSION", "1.0.0")
 
 labyMod {
     defaultPackageName = "org.example" //change this to your main package name (used by all modules)
     addonInfo {
-        namespace = "example"
-        displayName = "ExampleAddon"
-        author = "Example Author"
-        description = "Example Description"
+        namespace = "codehelper"
+        displayName = "CodeHelper"
+        author = "DasShorty"
+        description = "Addon to help you code minecraft plugins and mods"
         minecraftVersion = "*"
         version = getVersion().toString()
     }

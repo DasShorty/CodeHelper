@@ -2,18 +2,16 @@ package org.example.core;
 
 import net.labymod.api.addon.LabyAddon;
 import net.labymod.api.models.addon.annotation.AddonMain;
-import org.example.core.commands.ExamplePingCommand;
-import org.example.core.listener.ExampleGameTickListener;
+import org.example.core.commands.Base64Command;
 
 @AddonMain
-public class ExampleAddon extends LabyAddon<ExampleConfiguration> {
+public class CodeHelperAddon extends LabyAddon<ExampleConfiguration> {
 
   @Override
   protected void enable() {
     this.registerSettingCategory();
 
-    this.registerListener(new ExampleGameTickListener(this));
-    this.registerCommand(new ExamplePingCommand());
+    this.registerCommand(new Base64Command());
 
     this.logger().info("Enabled the Addon");
   }
